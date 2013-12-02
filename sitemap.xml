@@ -6,6 +6,10 @@
     
     
     <url>
+        <loc>/personal/test-dummy</loc>
+    </url>
+    
+    <url>
         <loc>/personal/automation-not-working</loc>
     </url>
     

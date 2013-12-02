@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Test Dummy",
+		  "category"   : "personal",
+		  "url"        : "/personal/test-dummy",
+		  "date"       : "2013-12-03 00:00:00 +0000",
+		  "shortdate"  : "December 03, 2013"
+		} ,
+	
+		{
 		  "title"      : "Automation not working",
 		  "category"   : "personal",
 		  "url"        : "/personal/automation-not-working",
