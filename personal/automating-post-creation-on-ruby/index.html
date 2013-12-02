@@ -1,0 +1,346 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Automating Post Creation on Ruby &#8211; The Evil-Genius</title>
+<meta name="description" content="with Rake">
+<meta name="keywords" content="Automate, Post, Creation, Rake">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.evil-genius.tk/images/hmfaysal-the-evil-genius.png">
+<meta name="twitter:title" content="Automating Post Creation on Ruby">
+<meta name="twitter:description" content="with Rake">
+<meta name="twitter:creator" content="@hmfaysal">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Automating Post Creation on Ruby">
+<meta property="og:description" content="with Rake">
+<meta property="og:url" content="http://www.evil-genius.tk/personal/automating-post-creation-on-ruby">
+<meta property="og:site_name" content="The Evil-Genius">
+
+
+<meta name="msvalidate.01" content="876AE1D2E9385286F3D9E65B76954CFE">
+
+
+<link rel="canonical" href="http://www.evil-genius.tk/personal/automating-post-creation-on-ruby">
+<link href="http://www.evil-genius.tk/feed.xml" type="application/atom+xml" rel="alternate" title="The Evil-Genius Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://www.evil-genius.tk/assets/css/main.min.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/abel.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://www.evil-genius.tk/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://www.evil-genius.tk/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://www.evil-genius.tk/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://www.evil-genius.tk/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.evil-genius.tk/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.evil-genius.tk/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.evil-genius.tk/images/apple-touch-icon-144x144-precomposed.png">
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+</head>
+
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	    <ul>
+	        
+			<li>
+				
+					<a href="http://www.evil-genius.tk/">Home</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://www.evil-genius.tk/about">About</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://www.evil-genius.tk/personal">Personal</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://www.evil-genius.tk/mathematics">Mathematics</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://www.evil-genius.tk/categories">Categories</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://www.evil-genius.tk/technical-details">T-Details</a>
+				 
+			</li>
+	        
+	        <li><a href="http://www.evil-genius.tk/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
+
+<header class="masthead" itemscope itemtype="http://schema.org/Organization">
+	<div class="wrap">
+		<a href="http://www.evil-genius.tk" class="site-logo" rel="home" title="The Evil-Genius" itemprop="url"><img src="http://www.evil-genius.tk/images/hmfaysal-the-evil-genius.png" width="200" height="200" alt="The Evil-Genius logo" class="animated fadeInUp" itemprop="logo"></a>
+		<h1 class="site-title animated fadeIn"><a href="http://www.evil-genius.tk">The Evil-Genius</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">You underestimate the Power of the Dark Side</h2>
+	</div>
+</header><!-- /.masthead -->
+
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://www.evil-genius.tk/tags.html#Automate" title="Pages tagged Automate" rel="tag">Automate</a>&nbsp;&bull;&nbsp;<a href="http://www.evil-genius.tk/tags.html#Post" title="Pages tagged Post" rel="tag">Post</a>&nbsp;&bull;&nbsp;<a href="http://www.evil-genius.tk/tags.html#Creation" title="Pages tagged Creation" rel="tag">Creation</a>&nbsp;&bull;&nbsp;<a href="http://www.evil-genius.tk/tags.html#Rake" title="Pages tagged Rake" rel="tag">Rake</a></span>
+        
+          <h1 class="entry-title" itemprop="headline">Automating Post Creation on Ruby</h1>
+        
+        <p><i class="icon-time"></i> 6 minutes read&nbsp;&bull;&nbsp;<time datetime="2013-12-03T00:00:00+00:00" itemprop="datePublished"><i class="icon-calendar"></i> December 03, 2013</time>&nbsp;&bull;&nbsp;<i class="icon-th-list"></i> Posted in <a href="http://www.evil-genius.tk/categories/index.html#personal" title="Other posts from the personal category" rel="tag">Personal</a></p>
+      </header>
+      <br>
+<div class="entry-content" itemprop="description">
+        <p>&#8220;Raking Jekyll&#8221; is the correct term here. I never used Rake much before, I never had any real use for it. But as soon as I turned to Jekyll for blogging, it soon became apparent that I would need to use Rake as a templating manager for my blog posts. Now all of you guys know that a few metadata has to be inserted in the beginning of any Jekyll posts for the Jekyll engine to recognize it, plus the filename has to be of a certain stricture. My theme requires a lot more metadata than the standard Jekyll requires, as I include the Featured image tag in the metadata itself. Now doing these manually was tiresome and was actively preventing me from writing regularly. So, I rolled up my sleeves and started digging with THOR and RAKE, to check which one will more streamline the process of starting a new post without the extra work.</p>
+
+<p>To do that, I first started with the template structure of my posts. A barebone post would look like this.
+    &#8212;
+    layout: post
+    title: &#8220;A Title&#8221;
+    description: &#8220;A Description&#8221;
+    modified: %Y-%m-%d
+    category: personal
+    tags: []
+    image: 
+      feature: 
+      credit: 
+      creditlink: 
+    comments: true
+    &#8212;</p>
+
+<p>So I referred to some gurus in the interwebs and wrote the rakefile which is as follows:</p>
+
+<div class="highlight"><pre><code class="ruby">  <span class="c1"># adapted from https://github.com/imathis/octopress/blob/master/Rakefile   </span>
+  <span class="c1"># usage rake new[&#39;My New Post&#39;] or rake new_post (defaults to &quot;My New Post&quot;)</span>
+  <span class="n">desc</span> <span class="s2">&quot;Start a new post&quot;</span>
+  <span class="n">task</span> <span class="ss">:new</span><span class="p">,</span> <span class="ss">:title</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+   <span class="n">args</span><span class="o">.</span><span class="n">with_defaults</span><span class="p">(</span><span class="ss">:title</span> <span class="o">=&gt;</span> <span class="s1">&#39;My New Post&#39;</span><span class="p">)</span>
+   <span class="n">title</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">title</span>
+   <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;_posts/</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">downcase</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;/</span><span class="p">,</span><span class="s1">&#39;and&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[,&#39;&quot;:\?!\(\)\[\]]/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/[\W\.]/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/-+$/</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.md&quot;</span>
+   <span class="nb">puts</span> <span class="s2">&quot;Creating new post: </span><span class="si">#{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span>
+   <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">post</span><span class="o">|</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;layout: post&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;title: </span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">title</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/&amp;/</span><span class="p">,</span><span class="s1">&#39;&amp;amp;&#39;</span><span class="p">)</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;description: &quot;&quot;&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;modified: </span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;category: personal&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;tags: []&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;image: &quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;  feature: &quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;  credit: &quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;  creditlink: &quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;comments: true&quot;</span>
+     <span class="n">post</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;---&quot;</span>
+   <span class="k">end</span>
+  <span class="k">end</span>
+</code></pre></div>
+
+<p>Now by running <code>rake new['My New Post']</code> in the command line creates a new file with the compliant name structure and fills in couple of information in the file itself too. Now thats awesome. But I wasn&#8217;t done yet, I thought of giving THOR a go and wrote the following THOR script which does exactly the same thing as the RAKEFILE does.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;active_support/all&#39;</span>
+
+<span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">Thor</span>
+  <span class="kp">include</span> <span class="ss">Thor</span><span class="p">:</span><span class="ss">:Actions</span>
+
+  <span class="n">desc</span> <span class="s2">&quot;new&quot;</span><span class="p">,</span> <span class="s2">&quot;Creates a new post&quot;</span>
+  <span class="n">argument</span> <span class="ss">:title</span>
+  <span class="k">def</span> <span class="nf">new</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-%d&quot;</span><span class="p">)</span>
+    <span class="n">create_file</span> <span class="s2">&quot;_posts/</span><span class="si">#{</span><span class="p">(</span><span class="n">date</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">parameterize</span><span class="si">}</span><span class="s2">.md&quot;</span><span class="p">,</span> <span class="o">&lt;&lt;-</span><span class="no">eos</span>
+<span class="sh">---</span>
+<span class="sh">layout: post</span>
+<span class="sh">title: #{title}</span>
+<span class="sh">description: A description</span>
+<span class="sh">modified: #{date}</span>
+<span class="sh">category: personal</span>
+<span class="sh">tags: []</span>
+<span class="sh">image:</span>
+<span class="sh">  credit:</span>
+<span class="sh">  creditlink:</span>
+<span class="sh">  feature:</span>
+<span class="sh">comments: true</span>
+<span class="sh">---</span>
+
+<span class="no">    eos</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div>
+
+<p>Now by running thor post:new &#8220;A New Post&#8221; creates the new file. While both of these methods are foolproof, I personally like to use the RAKEFILE instead of the THOR script.</p>
+
+        <br />
+<p>
+  Til next time,<br/>
+  Hossain Mohd. Faysal
+</p>
+<p>
+  <img src="/images/signature.png" alt="HMFaysal-Signature" /> 
+</p>
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://www.evil-genius.tk/personal/bandwidth-woes" class="btn" title="Bandwidth Woes">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2013 Hossain Mohd. Faysal.</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/hmfaysal" title="HM Faysal on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	<a href="http://facebook.com/hmfaysal" title="HM Faysal on Facebook" target="_blank"><i class="icon-facebook icon-2x"></i></a>
+	
+	
+	
+	
+	
+	<a href="http://github.com/hmfaysal" title="HM Faysal on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://www.evil-genius.tk/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://www.evil-genius.tk/assets/js/scripts.min.js"></script>
+
+<!-- Jekyll Simple Search option -->
+<script>
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://www.evil-genius.tk/search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
+
+  (function( $, window, undefined ) {
+    
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
+    
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
+    
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
+</script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-39365944-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+	        
+
+</body>
+</html>
