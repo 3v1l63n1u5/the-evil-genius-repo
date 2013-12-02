@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "Automating Post Creation",
+		  "category"   : "personal",
+		  "url"        : "/personal/automating-post-creation",
+		  "date"       : "2013-12-03 00:00:00 +0000",
+		  "shortdate"  : "December 03, 2013"
+		} ,
+	
+		{
 		  "title"      : "Bandwidth Woes",
 		  "category"   : "personal",
 		  "url"        : "/personal/bandwidth-woes",

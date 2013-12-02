@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Latest Posts &#8211; The Evil-Genius</title>
-<meta name="description" content="The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania.">
-<meta name="keywords" content="Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsylvania, doha, Qatar">
+<title>Automating Post Creation &#8211; The Evil-Genius</title>
+<meta name="description" content="with Rakefile">
+<meta name="keywords" content="">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/hmfaysal-the-evil-genius.png">
-<meta name="twitter:title" content="Latest Posts">
-<meta name="twitter:description" content="The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania.">
+<meta name="twitter:title" content="Automating Post Creation">
+<meta name="twitter:description" content="with Rakefile">
 <meta name="twitter:creator" content="@hmfaysal">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania.">
-<meta property="og:url" content="/index.html">
+<meta property="og:title" content="Automating Post Creation">
+<meta property="og:description" content="with Rakefile">
+<meta property="og:url" content="/personal/automating-post-creation">
 <meta property="og:site_name" content="The Evil-Genius">
 
 
 <meta name="msvalidate.01" content="876AE1D2E9385286F3D9E65B76954CFE">
 
 
-<link rel="canonical" href="/">
+<link rel="canonical" href="/personal/automating-post-creation">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="The Evil-Genius Feed">
 
 
@@ -61,9 +61,34 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
 </head>
 
-<body id="page" itemscope itemtype="http://schema.org/WebPage">
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -130,43 +155,40 @@
 </header><!-- /.masthead -->
 
 
-<div id="main" role="main" itemprop="mainContentOfPage">
-  <article class="entry" itemscope>
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title" itemprop="name">Latest Posts</h1>
+        <span class="entry-tags"></span>
+        
+          <h1 class="entry-title" itemprop="headline">Automating Post Creation</h1>
+        
+        <p><i class="icon-time"></i> 1 minute read&nbsp;&bull;&nbsp;<time datetime="2013-12-03T00:00:00+00:00" itemprop="datePublished"><i class="icon-calendar"></i> December 03, 2013</time>&nbsp;&bull;&nbsp;<i class="icon-th-list"></i> Posted in <a href="/categories/index.html#personal" title="Other posts from the personal category" rel="tag">Personal</a></p>
       </header>
-      <div class="entry-content" itemprop="description">
-        <ul class="post-list">
- 
-  <li><article><a href="/personal/automating-post-creation"><i class="icon-pencil"></i> Automating Post Creation <span class="entry-date">Posted in Personal&nbsp;&bull;&nbsp;<i class="icon-time"></i> 1 minute  read</span></a></article></li>
-  <p>Things can&#8217;t get easier than this, the whole post creation has been automated.
-&nbsp;<a href="/personal/automating-post-creation">Read more...</a></p>
- 
-  <li><article><a href="/personal/bandwidth-woes"><i class="icon-pencil"></i> Bandwidth Woes <span class="entry-date">Posted in Personal&nbsp;&bull;&nbsp;<i class="icon-time"></i> 8 minutes  read</span></a></article></li>
-  <p>&#8220;Lets buy a cheap Blackberry&#174;&#8220;-I said to my mom in Doha International Airport&#8217;s departure lounge while leaving for Bangladesh on 5th of April, 2013. I was so naive back then, so naive and juvenile and stupid. My logic was I...&nbsp;<a href="/personal/bandwidth-woes">Read more...</a></p>
- 
-  <li><article><a href="/personal/deploying-this-site"><i class="icon-pencil"></i> Deploying this site: Github and FTPloy <span class="entry-date">Posted in Personal&nbsp;&bull;&nbsp;<i class="icon-time"></i> 4 minutes  read</span></a></article></li>
-  <p>When it comes to manage any coding project, Git is second to none for version control manager. I love Git. Its simple, easy and its awesome branching capabilities give tremendous push when developing something, whether its a big project or...&nbsp;<a href="/personal/deploying-this-site">Read more...</a></p>
- 
-  <li><article><a href="/personal/Lets-fire-up-the-engines"><i class="icon-pencil"></i> Let's Fire up the engines! <span class="entry-date">Posted in Personal&nbsp;&bull;&nbsp;<i class="icon-time"></i> 3 minutes  read</span></a></article></li>
-  <p>&#8220;The beginning is the most important part of the work.&#8221; &#8211;Plato I have been away from the blogging scene for quite a while now, suddenly today it dawned upon me that I need to start writing/posting again. My writing is...&nbsp;<a href="/personal/Lets-fire-up-the-engines">Read more...</a></p>
+      <br>
+<div class="entry-content" itemprop="description">
+        <p>Things can&#8217;t get easier than this, the whole post creation has been automated.</p>
 
-<br>
- <div align="center">
-  <nav id="pagination">
-    
-     
-  </nav>
-  </div>
-
-</ul>
+        <br />
+<p>
+  Til next time,<br/>
+  Hossain Mohd. Faysal
+</p>
+<p>
+  <img src="/images/signature.png" alt="HMFaysal-Signature" /> 
+</p>
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="/personal/bandwidth-woes" class="btn" title="Bandwidth Woes">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
-
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
@@ -241,7 +263,7 @@
   })();
 </script>
 
-          
+	        
 
 </body>
 </html>
