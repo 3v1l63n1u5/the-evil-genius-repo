@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">The Evil-Genius</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="/feed.xml" />
-<link rel="alternate" type="text/html" href="" />
-<updated>2013-12-02T22:24:58+00:00</updated>
-<id>/</id>
+<link rel="self" type="application/atom+xml" href="http://www.evil-genius.tk/feed.xml" />
+<link rel="alternate" type="text/html" href="http://www.evil-genius.tk" />
+<updated>2013-12-02T22:26:21+00:00</updated>
+<id>http://www.evil-genius.tk/</id>
 <author>
   <name>HM Faysal</name>
-  <uri>/</uri>
+  <uri>http://www.evil-genius.tk/</uri>
   <email>hmfaysal@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Bandwidth Woes]]></title>
-  <link>/personal/bandwidth-woes</link>
-  <id>/personal/bandwidth-woes</id>
+  <link>http://www.evil-genius.tk/personal/bandwidth-woes</link>
+  <id>http://www.evil-genius.tk/personal/bandwidth-woes</id>
   <published>2013-11-04T00:00:00+00:00</published>
   <updated>2013-11-04T00:00:00+00:00</updated>
   <author>
     <name>HM Faysal</name>
-    <uri></uri>
+    <uri>http://www.evil-genius.tk</uri>
     <email>hmfaysal@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;&lt;em&gt;&amp;#8220;Lets buy a cheap &lt;a href=&quot;http://www.blackberry.com/&quot;&gt;Blackberry&lt;/a&gt;&amp;#174;&amp;#8220;&lt;/em&gt;-I said to my mom in &lt;a href=&quot;http://www.dohaairport.com/&quot;&gt;Doha International Airport&lt;/a&gt;&amp;#8217;s departure lounge while leaving for Bangladesh on 5th of April, 2013. I was so naive back then, so naive and juvenile and stupid. My logic was I would at least stay connected to my mail servers while I am acquiring an internet subscription which can take some time to get in Bangladesh. I used the &lt;a href=&quot;http://www.ooredoo.qa/en/SP_BLACKBERRY&quot;&gt;Blackberry&amp;#174; Internet Services&lt;/a&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; for as long as I can remember, and while you might squint at this, let me iterate that Blackberry devices along with BIS in particular is highly popular in the Middle-East. Considering the social environment and the whole rainy season deal, a cheap Blackberry handset looked like a viable option. So I got myself a &lt;a href=&quot;http://uk.blackberry.com/smartphones/blackberry-curve-8520.html&quot;&gt;Blackberry&amp;#174; 8520&lt;/a&gt;, which is not a great phone in anyways, but it handled my email requirements like a breeze as all the Blackberry devices are made to do. I stayed connected to my email account during the whole flight, even during takeoff, while the in-flight email services cost $1 per email viewing/sending, the Blackberry service is absolutely free of cost in-flight&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and a delight to use.  &lt;/p&gt;
@@ -61,19 +61,19 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/personal/bandwidth-woes&quot;&gt;Bandwidth Woes&lt;/a&gt; was originally published by HM Faysal at &lt;a href=&quot;&quot;&gt;The Evil-Genius&lt;/a&gt; on November 04, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.evil-genius.tk/personal/bandwidth-woes&quot;&gt;Bandwidth Woes&lt;/a&gt; was originally published by HM Faysal at &lt;a href=&quot;http://www.evil-genius.tk&quot;&gt;The Evil-Genius&lt;/a&gt; on November 04, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Deploying this site: Github and FTPloy]]></title>
-  <link>/personal/deploying-this-site</link>
-  <id>/personal/deploying-this-site</id>
+  <link>http://www.evil-genius.tk/personal/deploying-this-site</link>
+  <id>http://www.evil-genius.tk/personal/deploying-this-site</id>
   <published>2013-11-03T00:00:00+00:00</published>
   <updated>2013-11-03T00:00:00+00:00</updated>
   <author>
     <name>HM Faysal</name>
-    <uri></uri>
+    <uri>http://www.evil-genius.tk</uri>
     <email>hmfaysal@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;When it comes to manage any coding project, &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; is second to none for version control manager. I love Git. Its simple, easy and its awesome branching capabilities give tremendous push when developing something, whether its a big project or small. &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; simply adds in to the experience as it opens up the door for collaboration. Now there is service called the &lt;a href=&quot;http://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; which has a Jekyll parser built right into it. It means, you have to upload your textile and markdown files, your layout folder and any other folder you would want to use if you&amp;#8217;d have in case you wanted to generate the site locally- to a Github repository. From there its as simple as to create a new branch called &lt;em&gt;gh-pages&lt;/em&gt; and the site gets generated and becomes live. Then all a user has to write a new post/page and save the file as markdown and commit/push the changes to the repo and the changes are shown instantly on the website.&lt;/p&gt;
@@ -95,19 +95,19 @@
 
 &lt;p&gt;FTPloy&amp;#8217;s free plan includes the ability to have one project with no limit on the deployment one could make in a single day. FTPloy also offers a simple sign-up and getting started with the deployment process is like eating a pie.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/personal/deploying-this-site&quot;&gt;Deploying this site: Github and FTPloy&lt;/a&gt; was originally published by HM Faysal at &lt;a href=&quot;&quot;&gt;The Evil-Genius&lt;/a&gt; on November 03, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.evil-genius.tk/personal/deploying-this-site&quot;&gt;Deploying this site: Github and FTPloy&lt;/a&gt; was originally published by HM Faysal at &lt;a href=&quot;http://www.evil-genius.tk&quot;&gt;The Evil-Genius&lt;/a&gt; on November 03, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Let's Fire up the engines!]]></title>
-  <link>/personal/Lets-fire-up-the-engines</link>
-  <id>/personal/Lets-fire-up-the-engines</id>
+  <link>http://www.evil-genius.tk/personal/Lets-fire-up-the-engines</link>
+  <id>http://www.evil-genius.tk/personal/Lets-fire-up-the-engines</id>
   <published>2013-11-02T00:00:00+00:00</published>
   <updated>2013-11-02T00:00:00+00:00</updated>
   <author>
     <name>HM Faysal</name>
-    <uri></uri>
+    <uri>http://www.evil-genius.tk</uri>
     <email>hmfaysal@gmail.com</email>
   </author>
   <content type="html">&lt;blockquote&gt;
@@ -145,7 +145,7 @@ If you reply back to this with your IP address (http://www.hostgator.com/ip.shtm
   &lt;/ol&gt;
 &lt;/div&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/personal/Lets-fire-up-the-engines&quot;&gt;Let's Fire up the engines!&lt;/a&gt; was originally published by HM Faysal at &lt;a href=&quot;&quot;&gt;The Evil-Genius&lt;/a&gt; on November 02, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.evil-genius.tk/personal/Lets-fire-up-the-engines&quot;&gt;Let's Fire up the engines!&lt;/a&gt; was originally published by HM Faysal at &lt;a href=&quot;http://www.evil-genius.tk&quot;&gt;The Evil-Genius&lt;/a&gt; on November 02, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
