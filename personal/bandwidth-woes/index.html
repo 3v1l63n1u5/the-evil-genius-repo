@@ -40,12 +40,44 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://www.evil-genius.tk/assets/css/main.min.css">
 <!-- Webfonts -->
-<script src="//use.edgefonts.net/abel.js"></script>
+<script type="text/javascript">
+
+ // Add a script element as a child of the body
+ function downloadJSAtOnload() {
+ var element = document.createElement("script");
+ element.src = "//use.edgefonts.net/abel.js";
+ document.body.appendChild(element);
+ }
+
+ // Check for browser support of event handling capability
+ if (window.addEventListener)
+ window.addEventListener("load", downloadJSAtOnload, false);
+ else if (window.attachEvent)
+ window.attachEvent("onload", downloadJSAtOnload);
+ else window.onload = downloadJSAtOnload;
+
+</script>
 
 <meta http-equiv="cleartype" content="on">
 
 <!-- Load Modernizr -->
-<script src="http://www.evil-genius.tk/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+<script type="text/javascript">
+
+ // Add a script element as a child of the body
+ function downloadJSAtOnload() {
+ var element = document.createElement("script");
+ element.src = "http://www.evil-genius.tk/assets/js/vendor/modernizr-2.6.2.custom.min.js";
+ document.body.appendChild(element);
+ }
+
+ // Check for browser support of event handling capability
+ if (window.addEventListener)
+ window.addEventListener("load", downloadJSAtOnload, false);
+ else if (window.attachEvent)
+ window.attachEvent("onload", downloadJSAtOnload);
+ else window.onload = downloadJSAtOnload;
+
+</script>
 
 <!-- Icons -->
 <!-- 16x16 -->
