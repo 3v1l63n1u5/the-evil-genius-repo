@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://www.evil-genius.tk</loc>
+        <loc></loc>
     </url>
     
     
     <url>
-        <loc>http://www.evil-genius.tk/personal/automating-post-creation-on-ruby</loc>
+        <loc>/personal/automating-post-creation-on-ruby</loc>
     </url>
     
     <url>
-        <loc>http://www.evil-genius.tk/personal/bandwidth-woes</loc>
+        <loc>/personal/bandwidth-woes</loc>
     </url>
     
     <url>
-        <loc>http://www.evil-genius.tk/personal/deploying-this-site</loc>
+        <loc>/personal/deploying-this-site</loc>
     </url>
     
     <url>
-        <loc>http://www.evil-genius.tk/personal/Lets-fire-up-the-engines</loc>
+        <loc>/personal/Lets-fire-up-the-engines</loc>
     </url>
     
 </urlset>
